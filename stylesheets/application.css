@@ -1,0 +1,119 @@
+@import url(../../../stylesheets/application.css);
+
+body { background-color: #464648; font-family: Helvetica Neue, Helvetica, Verdana, sans-serif; color: #6E6E70; line-height: 1.3 }
+a, a:link, a:visited { color: #5283A1; font-weight: 500 }
+a:hover { color: #E68540 }
+h1, h2, h3, h4 { color: #5A5A5C !important; font-family: Helvetica Neue, Helvetica, Verdana, sans-serif; -webkit-font-smoothing: antialiased }
+h2, .wiki h1 { border-bottom-color: #DDDDDF }
+h3, .wiki h2 { padding: 6px 10px 6px 0px; border-bottom-color: #EBEBED }
+
+input[type="text"], 
+input[type="password"], 
+textarea { border-radius: 2px; border: 1px solid #DDDDDF; padding: 3px; color: #6E6E70; outline: none; }
+input:focus, 
+textarea:focus { box-shadow: 0 0 9px rgba(100,100,102,0.35); } 
+
+.box { padding: 6px 16px; color: #6E6E70; }
+
+#wrapper { margin: 0 auto 0; width: 92%; min-width: 900px; background-color: transparent }
+#top-menu { background-color: #464648; padding-top: 12px; color: #909092 }
+#top-menu a { color: #AEAEB0;  }
+#top-menu a:hover { text-decoration: none; color: #E68540 }
+#top-menu #loggedas { color: #909092 }
+#top-menu ul { float: right; }
+#header { background-color: #464648; min-height: 100px}
+#header h1:before { display: block; width: 230px; height: 50px; background: url(../images/typecode-redmine-logo.png) top left no-repeat #464648; position: absolute; left: 16px; top: 0; content: '' } 
+/*#header h1 { font-size: 12px; color: #464648; margin-left: 12px }*/
+#header h1 { font-size: 20px; line-height: 1; color: #6E6E70 !important; font-weight: 400; letter-spacing: -1px; margin-left: 248px; margin-top: 10px; -webkit-font-smoothing: antialiased; }
+body.controller-welcome #header h1,
+body.controller-my #header h1,
+body.controller-projects.action-index #header h1,
+body.controller-admin #header h1,
+body.controller-users #header h1,
+body.controller-groups #header h1,
+body.controller-roles #header h1,
+body.controller-trackers #header h1,
+body.controller-issue_statuses #header h1,
+body.controller-workflows #header h1,
+body.controller-custom_fields #header h1,
+body.controller-enumerations #header h1,
+body.controller-ldap_auth_sources #header h1,
+body.controller-settings #header h1,
+/*body.controller-search #header h1,*/
+body.controller-account #header h1 { color: #464648 !important; }
+
+#quick-search { margin-top: 74px; font-size: 11px }
+#quick-search, #quick-search a { color: #909092 }
+#quick-search #q { border: none; border-bottom: 1px solid #909092; padding: 2px 0; margin: 0 4px 0 4px; background: transparent; color: #CCCCCE; width: 160px; font-size: 11px; outline: none; position: relative; top: -2px   }
+#quick-search select { display: none; background-color: #6E6E70; border-radius: 4px; color: #CCCCCE; border: none; padding: 2px 6px }
+
+#main-menu { left: 8px }
+#main-menu li a { padding: 6px 12px 6px 12px; border-radius: 2px 2px 0 0; color: #CCCCCE }
+#main-menu li a:hover { background-color: #E68540; color: #fff }
+#main-menu li a.selected, #main-menu li a.selected:hover {  }
+#main-menu a.new-issue:before { content: '+ '; display: inline; color: #ABC441; font-weight: 900; position: relative; top: -1px; }
+#main-menu a.new-issue:hover:before { color: #fff; }
+
+#main { background-color: #F5F5F7; border-radius: 8px }
+#content { padding: 14px 24px 10px; border-radius: 8px 8px 8px 8px; min-height: 300px !important }
+#sidebar { width: 19% }
+
+body.controller-projects #content .splitcontentleft .wiki + ul { display: none }
+
+div.issue { background: url(../images/bg-orangestripe-4x4.png) repeat #fff; border: 1px solid #F9E0CF; border-radius: 2px; padding: 8px 16px }
+div.issue hr { background: #F9E0CF }
+
+table td { padding: 6px 2px }
+table.list { font-size: 11px; border-color: #EBEBED }
+table.list th { background-color: #EBEBED }
+table.list th,
+table.list td { text-align: left; padding: 6px 10px 6px 4px  }
+table.list th a:hover { text-decoration: none }
+table.list td.checkbox { padding: 7px 2px 0 }
+table.list td.assigned_to { min-width: 92px; }
+table.list tbody tr:hover { background-color:#E68540; color: #fff }
+table.list tbody tr:hover a { color: #fff; text-decoration: none }
+table.list .priority { font-weight: 500 }
+table.list .priority-6 { 
+	-webkit-animation-name: flasher;
+	-webkit-animation-duration: 2.5s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear; }
+table.list .priority-6:hover { -webkit-animation-name: none; }
+table.list .priority-6 .priority,
+table.list .priority-5 .priority { color: #F4591C }
+table.list .priority-4 .priority { color: #F48F3B }
+table.list .priority-3 .priority { color: #D8C119 }
+table.list .priority-2 .priority { color: #ABC441 }
+table.list .priority-1 .priority { color: #4294C1 }
+table.list tr:hover .priority { color: #fff !important }
+@-webkit-keyframes flasher {
+    0% { background-color: transparent}
+    49% { background-color: #FC9470}
+    100% { background-color: transparent}
+}
+.odd { background-color: #F5F5F7 }
+
+#content .tabs ul li { border-radius: 2px 2px 0 0; background-color: #EBEBED; }
+#content .tabs ul li a {  padding-left: 8px; padding-right: 8px; color: #6E6E70  }
+#content .tabs ul li a:hover { background-color: #61AAD1; color: #fff; }
+#content .tabs ul li a.selected:hover { color: #6E6E70  }
+
+
+.nodata, .warning, div.flash {
+	display:block; padding: 9px 14px 11px; margin-bottom: 24px; color: #AEAEB0;
+	font-size: 13px; line-height: 15px; border: 1px solid #EBEBED; background-color: #F5F5F7;
+	-webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
+.nodata, .warning { border-color: #FFE98D; background-color: #FFFEF3; color: #EABF0A;}
+div.flash { padding-left: 30px; background-position: 8px 7px;  }
+div.flash.notice { border-color: #C3E5C4; background-color: #F3FFF3; color: #799B7A; }
+div.flash.error { border-color: #FFACA1; background-color: #FFEEEB; color: #EA6453; }
+
+body.action-login #main,
+body.action-login #content { background-color: transparent; }
+#login-form table { border: 1px solid #FFE98D; background-color: #FFFEF3; border-radius: 2px; margin: 25px auto; }
+body.action-login div.flash.error { width: 400px; margin: 0 auto 0; }
+
+#footer { background-color: transparent; border-top: none; margin-bottom: 24px; margin-top: 6px; color: #909092; font-size: 11px }
+#footer a { color: #909092 }
+#turnkey-credit { display: none }
